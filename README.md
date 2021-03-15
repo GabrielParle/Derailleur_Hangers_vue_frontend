@@ -1,6 +1,8 @@
 # client
 
 > Derailleur hanger id
+> 
+Front end for the derailleur hanger app uses vue js router and makes requests to the api (express_derailleur api) using axios.
 
 ## Build Setup
 
