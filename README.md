@@ -3,7 +3,7 @@
 > Derailleur hanger id
 > 
 Front end for the derailleur hanger app uses vue js router and makes requests to the api (express_derailleur api) using axios.
-
+The live version is hosted on surge here https://squalid_hanger_test.surge.sh/ (sometimes db takes a few seonds to load).
 ## Build Setup
 
 ``` bash
