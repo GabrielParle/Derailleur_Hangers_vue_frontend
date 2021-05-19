@@ -5,6 +5,8 @@ import Hangers from '@/components/Hangers'
 import NewHanger from '@/components/NewHanger'
 import EditHanger from '@/components/EditHanger'
 import FindHanger from '@/components/FindHanger'
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+
 
 Vue.use(Router)
 

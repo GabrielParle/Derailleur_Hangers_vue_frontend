@@ -5,15 +5,17 @@
     
       
 
-      <div :class="{ shake: noActivated }">
-        <button @click="noActivated = true">special</button>
-        <span v-if="noActivated">Oh no!</span>
-      </div>
+     
     
     <typical
       :steps="['Derailleur', 1000, 'Derailleur Hanger Finder', 500]"
       :wrapper="'h1'"
     ></typical>
+
+     <div :class="{ shake: noActivated }">
+        <button @click="noActivated = true">INFO</button>
+        <span v-if="noActivated">Oh yes!</span>
+      </div>
   </div>
 </template>
 
@@ -38,7 +40,7 @@ export default {
 h1{
   background-color: #4d7ef79e;
   display: inline-block;
-  margin-top: 15vh;
+  margin-top: 2vh;
   border-radius: 10px;
   color: #f2f2f2;
   padding: 10px 80px;

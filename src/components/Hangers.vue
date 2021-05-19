@@ -1,15 +1,17 @@
 <template>
+<div id="bg" :style="{'background-image': `url(${require('@/assets/background2.jpeg')})`}">
+
   <div class="hangers">
     <my-component></my-component>
     <h1>Derailleur Hangers</h1>
-    <div v-if="hangers.length > 0" class="table-wrap">
+    <div v-if="(hangers.length)" class="table-wrap">
       <div>
         <router-link v-bind:to="{ name: 'NewHanger' }" class="addhanger">Add Hanger</router-link>
       </div>
       <table class="tableofHangers">
         <tr class="headers">
           <td width="10%">Hanger Name</td>
-          <td width="8%">Number of bolts</td>
+          <td width="8%">Number of bolts</td> 
           <td width="8%">Inside Dropout</td>
           <td width="8%">Outside Dropout</td>
           <td width="8%">QR</td>
@@ -33,21 +35,28 @@
       </table>
     </div>
     <div v-else>
-      There are no hangers.. Lets add one now <br /><br />
+      <h2>Loading <pulse-loader color="whitesmoke"></pulse-loader></h2>
       <router-link v-bind:to="{ name: 'NewHanger' }" class="add_hanger_link">Add Hanger</router-link>
     </div>
     
   </div>
+  </div>
+  
   
 </template>
 
 <script>
 import HangerService from '@/services/HangerService'
+
 export default {
   name: 'hangers',
   data () {
     return {
-      hangers: []
+      hangers: [],
+      image: {
+        "background-image":
+          'url("/home/gabriel/Documents/DerailleurHangers/client/src/assets/background2.jpeg")',
+      },
     }
   },
   mounted () {
@@ -64,6 +73,7 @@ export default {
     }
   }
 }
+ 
 </script>
 <style scoped type="text/css">
 .table-wrap {
@@ -130,4 +140,17 @@ h1{
   padding-bottom: 10px;
   
 }
+h2 {
+  color: whitesmoke;
+  
+}
+#bg {
+   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  
+}
+
+
 </style>

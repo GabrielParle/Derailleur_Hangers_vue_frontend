@@ -6,19 +6,26 @@
     <table>
   <tr>
     
+        <button class="home" @click="goHere('HelloWorld')" >
+          <td class="home" >
+          <h4 > Home Page </h4>
+          </td>
+        </button>
+         <button class="home" @click="goHere('Hangers')">
         <td class="home" >
-          <h4 @click="goHere('HelloWorld')" > Home Page </h4>
+          <h4  > Hangers Database </h4>
         </td>
+         </button>
+          <button class="home" @click="goHere('FindHanger')" >
         <td class="home" >
-          <h4 @click="goHere('Hangers')" > Hangers Database </h4>
+          <h4  > Find Hanger </h4>
         </td>
+         </button>
+         <button class="home" @click="goHere('NewHanger')" >
         <td class="home" >
-          <h4 @click="goHere('FindHanger')" > Find Hanger </h4>
+          <h4 > New Hanger </h4>
         </td>
-        
-        <td class="home" >
-          <h4 @click="goHere('NewHanger')"> New Hanger </h4>
-        </td>
+        </button>
     
   </tr>
   </table>
@@ -42,12 +49,17 @@ export default {
     background-color: rgba(105,105,105,0.5);
     
 }
-.home {
-    border-radius: 10px;
-    border-width: 2px;
-    
-    border-image: initial;
-    
+button {
+  background-color: transparent;
+  background-color: #4d7ef79e;
+  display: inline-block;
+  
+  border-radius: 10px;
+  color: #f2f2f2;
+  
+  text-transform: uppercase;
+  font-size: 1.5vh;
+  font-weight: bold;
 }
 
 .table-wrap {
@@ -63,25 +75,6 @@ table thead {
   background: #f2f2f2;
 }
 
-table tr:nth-child(odd) {
-  background: #f2f2f2;
-}
-table tr:nth-child(1) {
-  background: #4d7ef79e;
-  color: #fff;
-}
-a {
-  color: #4d7ef79e;
-  text-decoration: none;
-}
-a.add_post_link {
-  background: #4d7ef79e;
-  color: #fff;
-  padding: 10px 80px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  
-}
+
 
 </style>

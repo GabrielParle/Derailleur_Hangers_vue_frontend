@@ -6,10 +6,12 @@ import router from './router'
 import typical from "vue-typical"
 import Header from '@/components/header'
 
+
 Vue.config.productionTip = false
 
 Vue.component('my-component', Header);
 Vue.component('typical', typical);
+Vue.component('pulse-loader', require('vue-spinner/src/PulseLoader.vue').default);
 
 /* eslint-disable no-new */
 new Vue({

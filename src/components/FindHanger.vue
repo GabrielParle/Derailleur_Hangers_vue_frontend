@@ -1,4 +1,5 @@
 <template>
+<div id="bg" :style="{'background-image': `url(${require('@/assets/background2.jpeg')})`}">
   <div class="Hangers">
     <my-component></my-component>
     <h1>Find Hanger</h1>
@@ -51,7 +52,7 @@
       </div>
       
   </div>
-  
+  </div>
 </template>
 <script>
 import HangerService from '@/services/HangerService'
@@ -188,5 +189,11 @@ h1{
   font-size: 1.5vh;
   font-weight: bold;
 }
-
+#bg {
+   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  
+}
 </style>

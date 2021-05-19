@@ -1,4 +1,5 @@
 <template>
+<div id="bg" :style="{'background-image': `url(${require('@/assets/background2.jpeg')})`}">
   <div class="Hangers">
     <my-component></my-component>
     <h1>Edit Hanger</h1>
@@ -32,6 +33,7 @@
           <button class="app_post_btn" @click="updateHanger">Update</button>
         </div>
       </div>
+  </div>
   </div>
 </template>
 
@@ -111,5 +113,12 @@ export default {
   border: 1px solid #e0dede;
   outline: none;
   font-size: 12px;
+}
+#bg {
+   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  
 }
 </style>

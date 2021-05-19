@@ -18,8 +18,10 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "helmet": "^4.4.1",
+    "start": "^5.1.0",
     "vue": "^2.6.12",
     "vue-router": "^3.0.1",
+    "vue-spinner": "^1.0.4",
     "vue-typical": "^1.6.2"
   },
   "devDependencies": {

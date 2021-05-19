@@ -1,7 +1,10 @@
 <template>
-<div>
+<div id="bg" :style="{'background-image': `url(${require('@/assets/background2.jpeg')})`}">
     <my-component></my-component>
+    <div>
     <h1>Add New Hanger</h1>
+    </div>
+    <div id="block">
     <div class="form">
         <div>
             <input type="text" name="name" class="text" placeholder="Add new Hanger Name" v-model="name">
@@ -31,6 +34,7 @@
         <div>
             <button class="app_post_btn" @click="addPost">add Hanger</button>
         </div>
+    </div>
     </div>
     
 </div>
@@ -81,6 +85,7 @@ export default {
 }
 .form div {
   margin: 20px;
+  
 }
 .app_post_btn {
   background: #4d7ef7;
@@ -92,6 +97,23 @@ export default {
   width: 520px;
   border: none;
   cursor: pointer;
+}
+#bg {
+   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  
+}
+#block {
+    color: whitesmoke;
+    background-color: rgba(105,105,105,0.6);
+    display: inline-block;
+}
+h1 {
+    color: whitesmoke;
+    display: inline-block;
+    background-color: rgba(105,105,105,0.6);
 }
 
 </style>
