@@ -14,14 +14,17 @@
           <button @click="thruAxle = true"><img src="@/assets/thruAxle.jpg"><h1>ThruAxle</h1></button>
         </div> 
         <div v-if="(qr == true || thruAxle == true) && (inside != true && outside != true) ">
-          <button @click="inside = true"><img src="@/assets/inside.png"><h1>Mounts inside the frame</h1></button>
-          <button @click="outside = true"><img src="@/assets/outside.png"><h1>Mounts outside the frame</h1></button>
+          <button @click="inside = true; findHanger()"><img src="@/assets/inside.png"><h1>Mounts inside the frame</h1></button>
+          <button @click="outside = true; findHanger()" ><img src="@/assets/outside.png"><h1>Mounts outside the frame</h1></button>
         </div> 
-        <div v-if="(inside == true || outside == true) && display == false">
-            <button class="find" @click="findHanger">Find Hanger</button>
-        </div>   
+        
       </div>
       <div v-if="display" class="table-wrap">
+        <div> 
+          <button id="searchAgain" @click="bolts = 0 ;qr = false; thruAxle = false; outside = false; inside = false; display = false"> search again
+          
+            </button>
+        </div>
       <table class="tableofHangers">
         <tr class="headers">
           <td width="10%">Hanger Name</td>
@@ -194,6 +197,20 @@ h1{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
+  
+}
+#searchAgain{
+  background-color: transparent;
+  background-color: #4d7ef79e;
+  display: inline-block;
+  
+  border-radius: 10px;
+  color: #f2f2f2;
+  
+  text-transform: uppercase;
+  font-size: 1.5vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
   
 }
 </style>
